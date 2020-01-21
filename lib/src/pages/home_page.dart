@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_components/src/providers/menu_provider.dart';
+import 'package:flutter_components/src/utils/icons_strings_util.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -31,7 +32,7 @@ class HomePage extends StatelessWidget {
     data.forEach((opt) {
       final wtemp = ListTile(
         title: Text(opt['texto']),
-        leading: Icon(Icons.access_alarm, color: Colors.blue,),
+        leading: getIcon(opt['icono']),
         trailing: Icon(Icons.arrow_forward_ios, color: Colors.blue,),
         onTap: (){},
       );
